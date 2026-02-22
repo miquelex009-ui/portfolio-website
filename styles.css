@@ -1,65 +1,32 @@
-body {
-    background: #0a0e27;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navbar Styles */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(10, 14, 39, 0.9);
-    padding: 15px;
-    z-index: 1000;
-}
-
-/* Hero Section Styles */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(20, 24, 50, 0.8);
-    animation: fadeInUp 1s;
+.fadeInUp {
+  animation: fadeInUp 0.5s both;
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-/* Game Items Styles */
-.game-item {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
 .game-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  transition: transform 0.3s;
 }
 
-/* Contact Form Styles */
-.contact-form {
-    background: #1a1e36;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    .hero {
-        height: auto;
-    }
-    .contact-form {
-        width: 90%;
-    }
+  .game-item {
+    width: 90%;
+    margin: 10px auto;
+  }
 }
